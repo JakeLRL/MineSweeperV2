@@ -1,0 +1,62 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="window-container">
+    <div id="main-container">
+        <p>MineSweeper Daily</p>
+        <div id="top-container">
+            <div id="num-bombs">010</div>
+            <div id="reset"><img src="img/4-reset-1.png" alt=""></div>
+            <div id="timer">000</div>
+        </div>
+        <div id="board"></div>
+        <div id="level-selector">
+            <div id="easy" class="level">Easy</div>
+            <div id="middle" class="level">Intermediate</div>
+            <div id="hard" class="level">Hard</div>
+        </div>
+        <div id="settings">
+            <div id="instructions">Instructions</div>
+            <div id="mode">Mode</div>
+        </div>
+    </div>
+</div>
+<div class="overlay">
+    <div id="instructions-box">
+        <h2>Instructions</h2>
+        <p></p>
+        <p>
+            You are presented with a board of squares. Some squares contain mines (bombs), others don't. If you
+            click on
+            a square containing a bomb, you lose. If you manage to click all the squares (without clicking on any
+            bombs) you win.
+        </p>
+        <p></p>
+        <div id="return-to-game">Back to Game</div>
+    </div>
+</div>
+<div class="overlay">
+    <div id="winning">
+        <h2>You Win!</h2>
+        <p></p>
+        <div id="time-text"></div>
+        <div class="average-exploration"></div>
+        <div class="streak"></div>
+        <p></p>
+        <div id="new-game">New Game</div>
+    </div>
+</div>
+<div class="overlay">
+    <div id="losing">
+        <h2>You lose!</h2>
+        <p></p>
+        <div id="percent-cleared"></div>
+        <div class="average-exploration"></div>
+        <div class="streak"></div>
+        <p></p>
+        <div id="new-game-lose">New Game</div>
+    </div>
+</div>
